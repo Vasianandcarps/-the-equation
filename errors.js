@@ -3,8 +3,10 @@ let b = prompt("input number b");
 let c = prompt("input number c");
 let x;
 try {
-     
-     if (a==0) {
+     if(isNaN(a) || isNaN(b) || isNaN(c)){
+        throw new Error("введено не число");
+     }
+     else if (a==0) {
         x = -c/b
       } else if (b==0){
           x=Math.sqrt(-c/a)
